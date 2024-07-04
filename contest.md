@@ -79,104 +79,183 @@
    - D. `display: grid;`
    - **Correct Answer: C. `display: flex;`**
    - **Explanation:** The `display: flex;` property makes an element a flex container, enabling flexbox layout.
+ 
+ Sure! Here are 10 multiple-choice questions on various CSS concepts including CSS Grid, CSS Flexbox, CSS inheritance, CSS specificity, CSS Box Model, and CSS selectors:
 
-10. **Which property is used to align flex items along the main axis?**
-    - A. `justify-content`
-    - B. `align-items`
-    - C. `align-content`
-    - D. `flex-direction`
-    - **Correct Answer: A. `justify-content`**
-    - **Explanation:** The `justify-content` property aligns flex items along the main axis.
+### 10. CSS Grid
+**Question:** Which CSS property and value combination will create a 3-column layout in CSS Grid?
 
-### CSS Grid
+```css
+.container {
+  display: grid;
+  __________;
+}
+```
+**Options:**
+a) `grid-template-columns: 1fr 1fr 1fr;`  
+b) `grid-template-columns: auto auto auto;`  
+c) `grid-columns: 1fr 1fr 1fr;`  
+d) `columns: 3;`
 
-11. **Which CSS property is used to define a grid container?**
-    - A. `display: flex;`
-    - B. `display: inline;`
-    - C. `display: block;`
-    - D. `display: grid;`
-    - **Correct Answer: D. `display: grid;`**
-    - **Explanation:** The `display: grid;` property makes an element a grid container, enabling grid layout.
+**Correct Answer:** a) `grid-template-columns: 1fr 1fr 1fr;`
 
-12. **Which property is used to set the number of columns in a grid layout?**
-    - A. `grid-template-rows`
-    - B. `grid-template-columns`
-    - C. `grid-columns`
-    - D. `columns`
-    - **Correct Answer: B. `grid-template-columns`**
-    - **Explanation:** The `grid-template-columns` property defines the number and size of columns in a grid layout.
+**Explanation:** The `grid-template-columns` property defines the number of columns in a grid layout. The value `1fr 1fr 1fr` creates three columns of equal width.
 
-### CSS Specificity
+### 11. CSS Flexbox
+**Question:** How do you center an item horizontally and vertically within a flex container?
 
-13. **Which of the following selectors has the highest specificity?**
-    - A. `#header`
-    - B. `.header`
-    - C. `header`
-    - D. `header p`
-    - **Correct Answer: A. `#header`**
-    - **Explanation:** An ID selector has higher specificity than class and type selectors.
+```css
+.container {
+  display: flex;
+  __________;
+}
+.item {
+  __________;
+}
+```
+**Options:**
+a) `justify-content: center; align-items: center;`  
+b) `justify-content: center; align-content: center;`  
+c) `align-items: center; align-content: center;`  
+d) `justify-content: center; align-self: center;`
 
-14. **How is specificity calculated in CSS?**
-    - A. By the order of appearance in the stylesheet
-    - B. By the importance of the property
-    - C. By a combination of the number of IDs, classes, and elements
-    - D. By the length of the selector
-    - **Correct Answer: C. By a combination of the number of IDs, classes, and elements**
-    - **Explanation:** Specificity is calculated based on the number of ID selectors, class selectors, and element selectors.
+**Correct Answer:** a) `justify-content: center; align-items: center;`
 
-### CSS Cascading
+**Explanation:** `justify-content: center` centers the item horizontally and `align-items: center` centers it vertically within the flex container.
 
-15. **What does the "Cascading" in CSS stand for?**
-    - A. The ability to apply multiple stylesheets
-    - B. The hierarchical order in which styles are applied
-    - C. The use of external stylesheets
-    - D. The inheritance of styles from parent elements
-    - **Correct Answer: B. The hierarchical order in which styles are applied**
-    - **Explanation:** Cascading refers to the way CSS rules are applied in a specific order based on their importance and specificity.
+### 12. CSS Inheritance
+**Question:** Which CSS property is not inherited by default?
 
-### CSS Box Model
+**Options:**
+a) `color`  
+b) `font-size`  
+c) `border`  
+d) `line-height`
 
-16. **Which property is not part of the CSS box model?**
-    - A. `margin`
-    - B. `padding`
-    - C. `border`
-    - D. `position`
-    - **Correct Answer: D. `position`**
-    - **Explanation:** The box model includes margin, border, padding, and content, but not `position`.
+**Correct Answer:** c) `border`
 
-17. **What is the default value of the CSS `box-sizing` property?**
-    - A. `content-box`
-    - B. `border-box`
-    - C. `padding-box`
-    - D. `margin-box`
-    - **Correct Answer: A. `content-box`**
-    - **Explanation:** The default value of `box-sizing` is `content-box`, which includes only the content within the specified width and height.
+**Explanation:** The `border` property is not inherited by default, whereas properties like `color`, `font-size`, and `line-height` are inherited.
 
-### CSS Selectors
+### 13. CSS Specificity
+**Question:** Which of the following selectors has the highest specificity?
 
-18. **Which selector is used to select elements with a specific class?**
-    - A. `#classname`
-    - B. `.classname`
-    - C. `classname`
-    - D. `*classname`
-    - **Correct Answer: B. `.classname`**
-    - **Explanation:** The dot (`.`) notation is used to select elements with a specific class.
+**Options:**
+a) `.class`  
+b) `#id`  
+c) `element`  
+d) `element.class`
 
-19. **Which CSS selector is used to select all elements?**
-    - A. `*`
-    - B. `#`
-    - C. `.`
-    - D. `@`
-    - **Correct Answer: A. `*`**
-    - **Explanation:** The asterisk (`*`) selector selects all elements in the document.
+**Correct Answer:** b) `#id`
 
-### CSS Inheritance
+**Explanation:** ID selectors have a higher specificity compared to class selectors, type selectors, and combined selectors.
 
-20. **Which of the following CSS properties is inheritable?**
-    - A. `border`
-    - B. `color`
-    - C. `padding`
-    - D. `margin`
-    - **Correct Answer: B. `color`**
-    - **Explanation:** The `color` property is inheritable, meaning it is passed down from parent elements to child elements.
+### 14. CSS Box Model
+**Question:** Which property would you use to add space inside an element, but outside its content area?
 
+**Options:**
+a) `margin`  
+b) `padding`  
+c) `border`  
+d) `width`
+
+**Correct Answer:** b) `padding`
+
+**Explanation:** The `padding` property adds space inside an element, between the content and the border.
+
+### 15. CSS Selectors
+**Question:** How would you select all `<a>` elements inside a `<div>` with the class `.menu`?
+
+```css
+__________ {
+  color: red;
+}
+```
+**Options:**
+a) `div .menu a`  
+b) `.menu a`  
+c) `div.menu a`  
+d) `.menu > a`
+
+**Correct Answer:** b) `.menu a`
+
+**Explanation:** The selector `.menu a` selects all `<a>` elements that are descendants of any element with the class `.menu`.
+
+### 16. Advanced CSS Selectors
+**Question:** Which selector will select only the first child `<li>` element inside any `<ul>`?
+
+**Options:**
+a) `ul li:first-of-type`  
+b) `ul > li:first-child`  
+c) `ul > li:first-of-type`  
+d) `ul li:first-child`
+
+**Correct Answer:** b) `ul > li:first-child`
+
+**Explanation:** The selector `ul > li:first-child` selects the first child `<li>` element of any `<ul>`.
+
+### 17. CSS Grid
+**Question:** What does the following CSS grid code do?
+
+```css
+.container {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "sidebar main"
+    "footer footer";
+}
+```
+**Options:**
+a) Creates a grid with 2 rows and 2 columns  
+b) Creates a grid with 3 rows and 2 columns  
+c) Creates a grid with 3 rows and 3 columns  
+d) Creates a grid with 4 rows and 1 column
+
+**Correct Answer:** b) Creates a grid with 3 rows and 2 columns
+
+**Explanation:** The `grid-template-areas` property defines a grid layout with 3 rows and 2 columns based on the specified areas.
+
+### 18. CSS Flexbox
+**Question:** What does the following CSS code do?
+
+```css
+.container {
+  display: flex;
+  flex-direction: column-reverse;
+}
+```
+**Options:**
+a) Arranges flex items in a row in reverse order  
+b) Arranges flex items in a column in reverse order  
+c) Arranges flex items in a row in normal order  
+d) Arranges flex items in a column in normal order
+
+**Correct Answer:** b) Arranges flex items in a column in reverse order
+
+**Explanation:** The `flex-direction: column-reverse` property arranges the flex items in a column in reverse order.
+
+### 19. Advanced CSS Selectors
+**Question:** How would you select every other row in a table?
+
+**Options:**
+a) `tr:nth-child(2n)`  
+b) `tr:nth-child(odd)`  
+c) `tr:nth-of-type(even)`  
+d) `tr:nth-of-type(2n+1)`
+
+**Correct Answer:** a) `tr:nth-child(2n)`
+
+**Explanation:** The selector `tr:nth-child(2n)` selects every other row in a table, effectively selecting even rows.
+
+### Advanced CSS Selectors
+**Question 20** Which CSS selector will select only `<p>` elements that are immediately preceded by `<h2>` elements?
+
+**Options:**
+a) `h2 + p`  
+b) `h2 ~ p`  
+c) `h2 > p`  
+d) `h2 p`
+
+**Correct Answer:** a) `h2 + p`
+
+**Explanation:** The adjacent sibling combinator (`+`) selects the element that is immediately preceded by the specified element. In this case, `h2 + p` selects all `<p>` elements that are immediately preceded by an `<h2>` element.
